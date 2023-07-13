@@ -32,7 +32,7 @@ exports.login = (req, res) => {
         if (err) throw err;
 
         if (result) {
-          const token = jwt.sign({ userId: user.id }, 'melekch', { expiresIn: '1h' });
+          const token = jwt.sign({ userId: user.id }, 'ryhabarafet', { expiresIn: '1h' });
 
           res.cookie('token', token, { httpOnly: true });
 
